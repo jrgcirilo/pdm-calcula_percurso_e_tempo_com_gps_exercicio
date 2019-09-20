@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:columnCount="2"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:useDefaultMargins="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/atrgpsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:padding="15sp"
+        android:text="@string/atrgpsButton" />
+
+    <Button
+        android:id="@+id/atvgpsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill_horizontal"
+        android:padding="15sp"
+        android:text="@string/atvgpsButton" />
+
+    <Button
+        android:id="@+id/dstgpsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill_horizontal"
+        android:padding="15sp"
+        android:text="@string/dstgpsButton" />
+
+    <Button
+        android:id="@+id/inipercButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill_horizontal"
+        android:padding="15sp"
+        android:text="@string/inipercButton" />
+
+    <Button
+        android:id="@+id/termpercButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnSpan="1"
+        android:layout_columnWeight="1"
+        android:layout_gravity="fill_horizontal"
+        android:padding="15sp"
+        android:text="@string/termgpsButton" />
+
+    <EditText
+        android:id="@+id/psqEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:ems="10"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/psqButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center_horizontal|fill_horizontal"
+        android:text="@string/psqButton" />
+
+    <TextView
+        android:id="@+id/dstpercTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:paddingTop="20dp"
+        android:text="@string/dstpercTextView"
+        android:textSize="@dimen/dstpercTextView" />
+
+    <TextView
+        android:id="@+id/dstpercvlrTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:gravity="center"
+        android:paddingTop="10sp"
+        android:text="0"
+        android:textSize="@dimen/dstpercvlrTextView" />
+
+    <TextView
+        android:id="@+id/tmppercTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:gravity="center"
+        android:paddingTop="20sp"
+        android:text="@string/tmppercTextView"
+        android:textSize="@dimen/tmppercTextView" />
+
+    <Chronometer
+        android:id="@+id/tmppercChronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:gravity="center"
+        android:inputType="time"
+        android:paddingTop="10sp"
+        android:text="0"
+        android:textSize="@dimen/tmppercChronometer" />
+
+
+</GridLayout>
