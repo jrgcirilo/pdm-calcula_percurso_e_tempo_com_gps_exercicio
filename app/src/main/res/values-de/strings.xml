@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Route Berechnen</string>
+    <string name="atrgpsButton">Autorisieren Sie GPS</string>
+    <string name="atvgpsButton">Aktivieren Sie GPS</string>
+    <string name="dstgpsButton">Ausschalten GPS</string>
+    <string name="dstpercTextView">Zurückgelegte Strecke:</string>
+    <string name="inipercButton">Track Starten</string>
+    <string name="psqButton">Route in Karten Suchen</string>
+    <string name="termgpsButton">Route Beenden</string>
+    <string name="tmppercTextView">Verstrichene Zeit:</string>
+</resources>

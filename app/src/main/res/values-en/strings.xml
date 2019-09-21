@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculate Route</string>
+    <string name="atrgpsButton">Authorize GPS</string>
+    <string name="atvgpsButton">Enable GPS</string>
+    <string name="dstgpsButton">Turn off GPS</string>
+    <string name="dstpercTextView">Travelled Distance:</string>
+    <string name="inipercButton">Start Route</string>
+    <string name="psqButton">Search Route in Maps</string>
+    <string name="termgpsButton">Finish Route</string>
+    <string name="tmppercTextView">Elapsed Time:</string>
+</resources>

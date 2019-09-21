@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calcular Ruta</string>
+    <string name="atrgpsButton">Autorizar GPS</string>
+    <string name="atvgpsButton">Habilitar GPS</string>
+    <string name="dstgpsButton">Apagar GPS</string>
+    <string name="dstpercTextView">Distancia Recorrida:</string>
+    <string name="inipercButton">Iniciar Ruta</string>
+    <string name="psqButton">Buscar Ruta en Mapas</string>
+    <string name="termgpsButton">Finalizar Ruta</string>
+    <string name="tmppercTextView">Tiempo transcurrido:</string>
+</resources>
