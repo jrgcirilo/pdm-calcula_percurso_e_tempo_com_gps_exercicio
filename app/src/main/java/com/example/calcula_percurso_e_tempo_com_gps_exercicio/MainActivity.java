@@ -74,11 +74,11 @@ public class MainActivity extends AppCompatActivity {
             public void onLocationChanged(Location location){
                 latAt = location.getLatitude();
                 longAt = location.getLongitude();
-                locAt.setAltitude(latAt);
+                locAt.setLatitude(latAt);
                 locAt.setLongitude(longAt);
                 dst += location.distanceTo(locAnt);
                 locAnt = location;
-                dstpercvlrTextView.setText(getString(R.string.distance, dst));
+                dstpercvlrTextView.setText(getString(R.string.dst, dst));
                 if (locAt==null){
                     Toast.makeText(getApplicationContext(),"Localização não encontrada", Toast.LENGTH_SHORT).show();
                 }
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                         locationManager.requestLocationUpdates(
                                 LocationManager.GPS_PROVIDER,
                                 2000,
-                                10,
+                                1,
                                 locationListener
                         );
                         Toast.makeText(getApplicationContext(),"GPS ativado", Toast.LENGTH_SHORT).show();
@@ -168,10 +168,8 @@ public class MainActivity extends AppCompatActivity {
                         MainActivity.this,
                         Manifest.permission.ACCESS_FINE_LOCATION)
                         == PackageManager.PERMISSION_GRANTED){
-                    locAnt.setLongitude(longAt);
-                    locAnt.setLatitude(latAt);
                     tmppercChronometer.setBase(SystemClock.elapsedRealtime());
-                    tmppercChronometer.start();
+                    onChronometerTick(tmppercChronometer);
                     Toast.makeText(getApplicationContext(),"Percurso iniciado", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -215,31 +213,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_PERMISSION_GPS){
-            if (grantResults.length > 0 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
-                if (ActivityCompat.checkSelfPermission(MainActivity.this,
-                        Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
-                    locationManager.requestLocationUpdates(
-                            LocationManager.GPS_PROVIDER,
-                            2000,
-                            5,
-                            locationListener
-                    );
-                }
-            }else {
-                Toast.makeText(getApplicationContext(),"Sem GPS", Toast.LENGTH_SHORT).show();
-            }
-        }
+    public void onChronometerTick (Chronometer chronometer) {
+        chronometer.start();
+        dstpercvlrTextView.setText(getString(R.string.dst, dst));
+        tmppercChronometer.setBase(SystemClock.elapsedRealtime());
     }
-
-
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -261,6 +239,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_PERMISSION_GPS){
+            if (grantResults.length > 0 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
+                if (ActivityCompat.checkSelfPermission(MainActivity.this,
+                        Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
+                    locationManager.requestLocationUpdates(
+                            LocationManager.GPS_PROVIDER,
+                            2000,
+                            1,
+                            locationListener
+                    );
+                }
+            }else {
+                Toast.makeText(getApplicationContext(),"Sem GPS", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        locationManager.removeUpdates(locationListener);
     }
 }
 

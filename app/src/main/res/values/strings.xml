@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">Calcula Percurso</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings" translatable="false">Settings</string>
     <string name="atrgpsButton">Autorizar GPS</string>
     <string name="atvgpsButton">Ativar GPS</string>
     <string name="dstgpsButton">Desativar GPS</string>
     <string name="inipercButton">Iniciar Percurso</string>
     <string name="termgpsButton">Terminar Percurso</string>
-    <string name="psqButton">Pesquisar</string>
+    <string name="psqButton">Pesquisar Percurso no Maps</string>
     <string name="dstpercTextView">Distância Percorrida:</string>
     <string name="tmppercTextView">Tempo Decorrido:</string>
-    <string name="distance">%.2f m</string>
+    <string name="dst" translatable="false">%.2f m</string>
+    <string name="chr" translatable="false">0</string>
 </resources>

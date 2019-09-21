@@ -61,26 +61,6 @@
         android:padding="15sp"
         android:text="@string/termgpsButton" />
 
-    <EditText
-        android:id="@+id/psqEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_columnWeight="1"
-        android:ems="10"
-        android:gravity="center"/>
-
-    <Button
-        android:id="@+id/psqButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_columnSpan="2"
-        android:layout_columnWeight="1"
-        android:layout_gravity="center_horizontal|fill_horizontal"
-        android:text="@string/psqButton" />
-
     <TextView
         android:id="@+id/dstpercTextView"
         android:layout_width="wrap_content"
@@ -102,7 +82,7 @@
         android:layout_columnWeight="1"
         android:gravity="center"
         android:paddingTop="10sp"
-        android:text="0"
+        android:text="@string/dst"
         android:textSize="@dimen/dstpercvlrTextView" />
 
     <TextView
@@ -127,8 +107,28 @@
         android:gravity="center"
         android:inputType="time"
         android:paddingTop="10sp"
-        android:text="0"
+        android:text="@string/chr"
         android:textSize="@dimen/tmppercChronometer" />
+
+    <EditText
+        android:id="@+id/psqEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:ems="10"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/psqButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center_horizontal|fill_horizontal"
+        android:text="@string/psqButton" />
 
 
 </GridLayout>
