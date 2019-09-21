@@ -10,5 +10,4 @@
     <string name="dstpercTextView">Distância Percorrida:</string>
     <string name="tmppercTextView">Tempo Decorrido:</string>
     <string name="dst" translatable="false">%.2f m</string>
-    <string name="chr" translatable="false">0</string>
 </resources>
