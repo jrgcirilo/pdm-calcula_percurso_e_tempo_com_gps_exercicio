@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                     locationManager.removeUpdates(locationListener);
                     Toast.makeText(getApplicationContext(),"GPS desativado", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(),"GPS desligado", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(getApplicationContext(),"GPS desligado", Toast.LENGTH_SHORT).show();
                 }
             }
         });
